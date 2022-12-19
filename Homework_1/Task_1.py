@@ -10,7 +10,9 @@
 # 7 -> да
 # 1 -> нет
 
-def day_of_week(day):
+
+def day_of_week():
+    day = input("Enter the day of the week from 1 to 7: ")
     while not day.isdigit() or not 0 < int(day) < 8:
         day = input("Entered not a digit or not from 1 to 7. Try again: ")
     if 0 < int(day) < 6:
@@ -19,4 +21,4 @@ def day_of_week(day):
         print("Yes! Today is a weekend")
 
 
-day_of_week(input("Input the number of the week: "))
+day_of_week()
