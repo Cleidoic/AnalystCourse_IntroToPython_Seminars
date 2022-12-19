@@ -39,4 +39,4 @@ def define_quarter(x, y):
 
 x = get_num(input("Entered X coordinate: "))
 y = get_num(input("Entered Y coordinate: "))
-print(define_a_quarter(x, y))
+print("Coordinate quarter number:", define_quarter(x, y))
