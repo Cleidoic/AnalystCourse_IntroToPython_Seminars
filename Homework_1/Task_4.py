@@ -29,7 +29,7 @@ def get_range(quarter):
         case 4:
             print("Range: x > 0 and y < 0")
         case _:
-            print("No such range")
+            print("There is no such quarter")
 
 
 quarter = get_num(input("Enter the number of the coordinate quarter from 1 to 4: "))
