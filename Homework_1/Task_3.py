@@ -27,7 +27,7 @@ def get_num(message):
 
 
 def define_quarter(x, y):
-    if x and y > 0:
+    if x > 0 and y > 0:
         return 1
     elif x < 0 < y:
         return 2
