@@ -32,6 +32,7 @@ def sum_digit(num):
 
 print(
     sum_digit(
-        get_num(input("Enter the number whose sum of digits you want to calculate: "))
+        get_num(
+            input("Enter the number whose sum of digits you want to calculate: "))
     )
 )
