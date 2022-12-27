@@ -7,6 +7,9 @@
 # -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # -> [0, 7, 6, 3, 4, 2, 9, 5, 1, 8]
 
+import random
+
+
 def get_num(message):
     while True:
         try:
@@ -24,7 +27,17 @@ def get_list(n):
     return res
 
 
-# def shuffle():
+def shuffle(list):
+    for i in range(len(list)):
+        rnd = round(random.random() * 10)
+        tmp = list[rnd]
+        list[rnd] = list[i]
+        list[i] = tmp
+    return list
 
 
-print(get_list(get_num(input())))
+n = get_num(input("Enter the number: "))
+list = get_list(n)
+print(list)
+shuffle(list)
+print(list)
