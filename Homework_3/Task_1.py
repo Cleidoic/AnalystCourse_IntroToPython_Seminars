@@ -30,7 +30,7 @@ def get_num(message):
 def get_list(n):
     res = []
     for i in range(n):
-        res.append(round(random.random()*100))
+        res.append(round(random.random()*10))
     print(res)
     return res
 
