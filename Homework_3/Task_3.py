@@ -25,7 +25,7 @@ def get_num(message=input("Enter the number: ")):
 
 def bin_convert(n):
     res = []
-    while n != 0:
+    while n:
         res.insert(0, n % 2)
         n //= 2
     return res
