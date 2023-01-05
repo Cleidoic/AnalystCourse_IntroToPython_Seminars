@@ -21,6 +21,7 @@ def get_num(message=input("Enter the number: ")):
             message = input("Entered not a number. Try again: ")
             continue
 
+
 def negafib(num):
     a, b = 1, 1
     list = [0]
@@ -30,4 +31,5 @@ def negafib(num):
         a, b = b, b + a
     return list
 
-print(negafib(get_num()))
+
+print(*negafib(get_num()))
