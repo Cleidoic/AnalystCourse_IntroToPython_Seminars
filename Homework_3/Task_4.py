@@ -37,14 +37,16 @@ def get_list(n):
     return res
 
 
+def fract(list, i=0):
+    return round(list[i] - int(list[i]), 2)
+
+
+# Или можно отбросить целую часть у всего списка и работать уже с ним:
+#
 # def fract(list):
 #     for i in range(len(list)):
 #         list[i] = round(list[i] - int(list[i]), 2)
 #     return list
-
-
-def fract(list, i=0):
-    return round(list[i] - int(list[i]), 2)
 
 
 def get_max_min(list):
