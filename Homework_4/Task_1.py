@@ -24,3 +24,11 @@ def accuracy (num, acc):
 
 print(accuracy(float(input("Enter a real number: ")),
                float(input("Enter the required accuracy 0.001: "))))
+
+# ---------------------------- Вариант 2:
+
+num = float(input("Enter a real number: "))
+
+_, accu = input("Enter the required accuracy 0.001: ").split(".")
+print(f"{num:.{len(accu)}f}")
+
