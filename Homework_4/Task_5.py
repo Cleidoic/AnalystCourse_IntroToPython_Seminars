@@ -22,6 +22,7 @@
 # The contents of the files do not match!
 
 from random import choice
+import Task_4
 
 
 def poly_sum(name_1: str, name_2: str):
@@ -38,4 +39,4 @@ def poly_sum(name_1: str, name_2: str):
             print("The contents of the files do not match!")
 
 
-poly_sum("poly.txt", "poly_2.txt")
+poly_sum(Task_4.polynominal(), Task_4.polynominal())
