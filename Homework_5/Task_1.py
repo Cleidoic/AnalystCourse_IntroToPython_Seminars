@@ -22,3 +22,26 @@
 #
 # out
 # The data is incorrect
+
+from random import sample
+
+
+def list_rand_words(count: int, alp: str = "абв"):
+    word_list = []
+    for i in range(count):
+        letters = sample(alp, k=3)
+        word_list.append("".join(letters))
+    return " ".join(word_list)
+
+
+# def list_rand_words(count: int, alp: str = "абв"):
+#     return " ".join("".join(sample(alp, 3)) for _ in range(count))
+
+def simple_sentence(words: str) -> str:
+    # return " ".join(words.replace("абв", "").split())
+    return " ".join(i for i in words.split() if i != "абв")
+
+
+all_list = list_rand_words(int(input("Number of words: ")))
+print(all_list)
+print(simple_sentence(all_list))
