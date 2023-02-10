@@ -20,7 +20,7 @@ def menu():
             case "1":
                 print_all()
             case "2":
-                find_entry(input("Enter surname or phone number: "), read_all())
+                find_entry(input("Enter parameter value: "), read_all())
             case "3":
                 add_entry(add_menu())
             case "4":
@@ -29,7 +29,7 @@ def menu():
                 if find_entry(id_change, read_all()) and (answer := edit_menu()):
                     edit_entry(answer, id_change)
             case "5":
-                del_entry(input("Enter surname or phone number: "))
+                del_entry(input("Enter param value: "))
             case "6":
                 import_export_menu()
             case "7":
@@ -56,16 +56,17 @@ def edit_menu():
     while True:
         print("\nChanging:")
         change = input("1. name\n"
-                       "2. surname\n"
-                       "3. phone\n"
+                       "2. breed\n"
+                       "3. aviary\n"
                        "4. description\n"
-                       "5. exit\n")
+                       "5. sex\n"
+                       "6. exit\n")
 
         match change:
-            case "1" | "2" | "3" | "4":
+            case "1" | "2" | "3" | "4" | "5":
                 type_date = add_dict[change]
                 return type_date, check(type_date)
-            case "5":
+            case "6":
                 logging.info('Exited the edit menu')
                 return 0
             case _:

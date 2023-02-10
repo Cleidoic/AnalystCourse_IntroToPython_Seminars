@@ -5,6 +5,7 @@ from xml.dom.minidom import parseString
 from log import logging
 
 name_db = "pets_list.csv"
+fieldnames = ["id", "name", "breed", "aviary", "description", "sex"]
 
 
 def save_csv(file_name):
@@ -13,7 +14,6 @@ def save_csv(file_name):
     with open(f'{file_name}.csv', 'w', encoding="utf-8", newline="") as file_w, \
             open(name_db, encoding="utf-8") as file_r:
         all_data = csv.DictReader(file_r)
-        fieldnames = ["id", "name", "surname", "phone", "description"]
         writer = csv.DictWriter(file_w, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(all_data)
